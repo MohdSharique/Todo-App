@@ -10,6 +10,7 @@ class TodoListsController < ApplicationController
   # GET /todo_lists/1
   # GET /todo_lists/1.json
   def show
+    @sorted_something = @todo_list.todo_items.order(priority: :asc)
   end
 
   # GET /todo_lists/new
