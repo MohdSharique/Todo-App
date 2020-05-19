@@ -1,19 +1,21 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @todo_list.title %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @todo_list.description %>
-</p>
-
+  <div class ="cen">
+    <strong>Title:</strong>
+    <%= @todo_list.title %>
+    <br>
+    <strong>Description:</strong>
+    <%= @todo_list.description %>
+    <br><br>
+  </div>
 <div id="todo_items_wrapper">
-  <% @sorted_something.each do |todo_item| %>
-    <%= render "todo_items/todo_item", todo_item: todo_item %>
-  <% end %>
+  <table>
+    <tr>
+      <% @sorted_something.each do |todo_item| %>
+        <%= render "todo_items/todo_item", todo_item: todo_item %>
+      <% end %>
+    </tr>
+  </table>
 
   <div id="form">
     <%= render "todo_items/form" %>
