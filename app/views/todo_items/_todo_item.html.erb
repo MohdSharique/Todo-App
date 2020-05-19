@@ -1,2 +1,12 @@
-<p><%= todo_item.content %></p>
-<%= link_to "Delete", todo_list_todo_item_path(@todo_list, todo_item.id), method: :delete, data: { confirm: "Are you sure?" } %>
+<div class="row clearfix">
+  <div class="todo_item">
+    Item:&nbsp; <%= todo_item.content %>
+    <br>
+    Priority:&nbsp; <%= todo_item.priority %>
+    <br>
+    Deadline:&nbsp; <%= todo_item.deadline %>
+  </div>
+  <div class="trash">
+   <%= link_to "Delete", todo_list_todo_item_path(@todo_list, todo_item.id), method: :delete, data: { confirm: "Are you sure?" } %>
+  </div>
+</div>
